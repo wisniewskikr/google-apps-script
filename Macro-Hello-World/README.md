@@ -37,4 +37,4 @@ To launch project please:
 * Choose "Tools -> Script editor";
 * In dropdown choose file "macros.gs" and function "myFunction";
 * Click "Run";
-* (Optional) Sometimes you will be asked to confirm priviliges.
+* (Optional) Sometimes you will be asked to confirm permissions.
