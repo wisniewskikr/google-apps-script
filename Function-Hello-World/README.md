@@ -11,13 +11,13 @@ GSHEET URL
 DESCRIPTION
 -----------
 
-#####Goal
+##### Goal
 The goal of this project is to show how to display text "Hello World" in Gsheet using Google Apps Script.
 
-#####Details
+##### Details
 When Google Apps Script function is run then text "Hello World" shoudl be displayed in Gsheet.
 
-#####Result 
+##### Result 
 Text "Hello World" should be displayed in the cell A1.
 
 
