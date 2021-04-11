@@ -34,6 +34,6 @@ LAUNCH
 To launch project please:
 * Open Gsheet;
 * Choose "Tools -> Script editor";
-* In dropdown choose "myFunction";
+* In dropdown choose file "functions.gs" and function "myFunction";
 * Click "Run";
 * (Optional) Sometimes you will be asked to confirm priviliges.
