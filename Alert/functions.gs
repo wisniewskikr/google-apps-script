@@ -6,5 +6,6 @@ function onOpen() {
 }
 
 function myFunction() {
-  SpreadsheetApp.getUi().alert('Hello World');
+  var ui = SpreadsheetApp.getUi();
+  ui.alert('Hello World');
 };

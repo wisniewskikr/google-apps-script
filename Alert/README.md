@@ -5,27 +5,27 @@ ALERT
 GSHEET URL
 ----------
 
-* **Gsheet URL**: https://docs.google.com/spreadsheets/d/1TIPgIjb3lBYsFpSM_HknEGlOsDKqCt_HsApGuYbDS7o/edit?usp=sharing
+* **Gsheet URL**: https://docs.google.com/spreadsheets/d/1tPjTQhIX2Q6lxf41zli2o7Vpu1btCcFWQHsOzqys6GI/edit?usp=sharing
 
 
 DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to show how to display alert text "Hello World" in Gsheet using Menu.
+The goal of this project is to show how to display Alert in Gsheet using Menu. 
 
 ##### Details
-When user choose custom menu in Gsheet then Google Apps Script function is run then alert with text "Hello World" shoudl be displayed in Gsheet.
+When user choose custom menu in Gsheet then Google Apps Script function is run then Alert shoudl be displayed in Gsheet.
 
 ##### Result 
-Text "Hello World" should be displayed as alert.
+Text "Hello World" should be displayed in Alert.
 
 
 IMPLEMENTATION
 -----------
 
 Implementation details:
-* In file "functions.gs" create functions onOpen() and myFunction().
+* In file "functions.gs" create all functions.
   
 
 LAUNCH
