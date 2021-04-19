@@ -1,31 +1,28 @@
-MENU
-====
+ERROR
+=====
 
 
 GSHEET URL
 ----------
 
-* **Gsheet URL**: https://docs.google.com/spreadsheets/d/1kROyO5S3pwJqCs9k5YbnMHiJ6TckYygWBBfjfF1cr4g/edit?usp=sharing
+* **Gsheet URL**: https://docs.google.com/spreadsheets/d/154NpD979qHod0W5FldwKaG6HCe644n3QiVtt1g0gnY4/edit?usp=sharing
 
 
 DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to show how to display text "Hello World" in Gsheet using Menu.
+The goal of this project is to show how error works.
 
 ##### Details
-When user choose custom menu in Gsheet then Google Apps Script function is run then text "Hello World" shoudl be displayed in Gsheet.
-
-##### Result 
-Text "Hello World" should be displayed in the cell A1.
+When user choose custom menu in Gsheet then Google Apps Script function is run and dialog with error is displayed.
 
 
 IMPLEMENTATION
 -----------
 
 Implementation details:
-* In file "functions.gs" create functions onOpen() and myFunction().
+* In file "functions.gs" create custom functions.
   
 
 LAUNCH

@@ -15,17 +15,14 @@ DESCRIPTION
 The goal of this project is to show how to display text "Hello World" in Gsheet using Menu.
 
 ##### Details
-When user choose custom menu in Gsheet then Google Apps Script function is run then text "Hello World" shoudl be displayed in Gsheet.
-
-##### Result 
-Text "Hello World" should be displayed in the cell A1.
+When user choose custom menu in Gsheet then Google Apps Script function is run and text "Hello World" is displayed in Gsheet.
 
 
 IMPLEMENTATION
 -----------
 
 Implementation details:
-* In file "functions.gs" create functions onOpen() and myFunction().
+* In file "functions.gs" create custom functions.
   
 
 LAUNCH
