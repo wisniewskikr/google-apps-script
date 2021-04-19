@@ -12,8 +12,9 @@ function myFunction() {
   if (response == ui.Button.YES) {
     Logger.log('The user clicked "Yes."');
     displayHelloWorld();
-  } else {
+  } else {    
     Logger.log('The user clicked "No" or the close button in the dialog\'s title bar.');
+    removeHelloWorld();
   }
 
 };
@@ -22,4 +23,10 @@ function displayHelloWorld() {
   var spreadsheet = SpreadsheetApp.getActive();
   spreadsheet.getRange('A1').activate();
   spreadsheet.getCurrentCell().setValue('Hello World');
-};
+}
+
+function removeHelloWorld() {
+  var spreadsheet = SpreadsheetApp.getActive();
+  spreadsheet.getRange('A1').activate();
+  spreadsheet.getCurrentCell().setValue(null);
+}

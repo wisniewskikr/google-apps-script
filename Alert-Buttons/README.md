@@ -20,7 +20,7 @@ This Alert has two buttons: "Yes" and "No". If user clicks "Yes" then text "Hell
 
 ##### Result 
 After click "Yes" in Alert the text "Hello World" should be displayed in cell A1.
-After click "No" or close Alert nothing should happened.
+After click "No" or close Alert then cell A1 should be cleaned.
 
 
 IMPLEMENTATION
