@@ -1,0 +1,41 @@
+SIDEBAR-SIMPLE
+==============
+
+
+GSHEET URL
+----------
+
+* **Gsheet URL**: https://docs.google.com/spreadsheets/d/1WkX8QZu9HSzNwUnOUr4_qc8YHzVf4hxlqlyOtvPx1ao/edit#gid=0
+
+
+DESCRIPTION
+-----------
+
+##### Goal
+The goal of this project is to show how to display simple Sidebar in Gsheet using Menu. 
+On Sidebar is dislayed message "Hello World". This message is displayed in Gsheet after submit.
+
+##### Details
+When user choose custom menu in Gsheet then Google Apps Script function is run and Sidebar should be displayed in Gsheet.
+
+##### Result 
+Values from Sidebar should be displayed in Gsheet.
+
+
+IMPLEMENTATION
+-----------
+
+Implementation details:
+* In file "functions.gs" create all functions;
+* In file "Sidebar.html" is html code;
+* In file "Sidebar.js.html" is js code;
+* In file "Sidebar.css.html" is css code. 
+  
+
+LAUNCH
+------
+
+To launch project please:
+* Open Gsheet;
+* Choose "Sidebar -> Open";
+* (Optional) Sometimes you will be asked to confirm permissions.
