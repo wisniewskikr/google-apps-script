@@ -12,21 +12,19 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to show how to write and read values in Gsheet.
+The goal of this project is to show how to display size - last column or row - in Gsheet.
 
 ##### Details
 When user choose an item in custom menu in Gsheet then he can:
-* Write text "Hello World" in a cell;
-* Read text "Hello World" from a cell; 
-* Write text "Hello World" in a column;
-* Read text "Hello World" from a column; 
-* Write text "Hello World" in a row;
-* Read text "Hello World" from a row; 
-* Write text "Hello World" in a range;
-* Read text "Hello World" from a range; 
+* Get last column with data;
+* Get last row with data; 
+* Get last column with data in range A1:C3;
+* Get last row with data in range A1:C3; 
+* Get last from column A;
+* Get last from row One. 
 
 ##### Result 
-Text "Hello World" should be written in Gsheet cells or read as alert.
+Alert with results should be displayed.
 
 
 IMPLEMENTATION

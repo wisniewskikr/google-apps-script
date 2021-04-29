@@ -1,87 +1,130 @@
 function onOpen() {
   var ui = SpreadsheetApp.getUi();
   ui.createMenu('Greeting')
-    .addItem('Write "Hello World" in cell A1', 'writeInCell')
-    .addItem('Read "Hello World" from cell A1', 'readFromCell')
-    .addItem('Write "Hello World" in column A1:A3', 'writeInColumn')
-    .addItem('Read "Hello World" from column A1:A3', 'readFromColumn')
-    .addItem('Write "Hello World" in row A1:C1', 'writeInRow')
-    .addItem('Read "Hello World" from row A1:C1', 'readFromRow')
-    .addItem('Write "Hello World" in range A1:C3', 'writeInRange')
-    .addItem('Read "Hello World" from range A1:C3', 'readFromRange')             
+    .addItem('Fill Sheet with data', 'fillSheetWithData')
+    .addItem('Clear Sheet', 'clearSheet')
+    .addItem('Get last column with data', 'lastColumnWithData') 
+    .addItem('Get last row with data', 'lastRowWithData') 
+    .addItem('Get last column with data in range A1:C3', 'lastColumnWithDataInRange') 
+    .addItem('Get last row with data in range A1:C3', 'lastRowWithDataInRange') 
+    .addItem('Get last from column A', 'lastFromColumnA')  
+    .addItem('Get last from row One', 'lastFromRowOne')     
     .addToUi();
 }
 
-function writeInCell() {
-  var spreadsheet = SpreadsheetApp.getActive();
-  spreadsheet.getRange('A1').setValue('Hello World');  
-};
-
-function readFromCell() {
-  var spreadsheet = SpreadsheetApp.getActive();
-  var value = spreadsheet.getRange('A1').getValue();
-  Logger.log("Value of cell A1: " + value);
-  SpreadsheetApp.getUi().alert("Value of cell A1: " + value);
-};
-
-function writeInColumn() {  
-  var spreadsheet = SpreadsheetApp.getActive();
-  spreadsheet.getRange('A1:A3').setValue("Hello World");  
-}
-
-function readFromColumn() {
-  var count = 0;
-  var spreadsheet = SpreadsheetApp.getActive();
-  var rows = spreadsheet.getRange('A1:A3').getValues();
-  for(var i = 0; i < rows.length; i++) {
-    var value = rows[i];
-    if ("Hello World" == value) {
-      count++;
-    }
-  }
-  Logger.log("Count of 'Hello World' from column A1:A3 is: " + count);
-  SpreadsheetApp.getUi().alert("Count of 'Hello World' from column A1:A3 is: " + count);
-}
-
-function writeInRow() {  
-  var spreadsheet = SpreadsheetApp.getActive();
-  spreadsheet.getRange('A1:C1').setValue("Hello World");  
-}
-
-function readFromRow() {
-  var count = 0;
-  var spreadsheet = SpreadsheetApp.getActive();
-  var rows = spreadsheet.getRange('A1:C1').getValues();
-  var columns = rows[0];
-  for(var i = 0; i < columns.length; i++) {
-    var value = columns[i];
-    if ("Hello World" == value) {
-      count++;
-    }
-  }
-  Logger.log("Count of 'Hello World' from column A1:C1 is: " + count);
-  SpreadsheetApp.getUi().alert("Count of 'Hello World' from column A1:C1 is: " + count);
-}
-
-function writeInRange() {  
+function fillSheetWithData() {  
   var spreadsheet = SpreadsheetApp.getActive();
   spreadsheet.getRange('A1:C3').setValue("Hello World");  
 }
 
-function readFromRange() {
-  var count = 0;
+function clearSheet() {  
   var spreadsheet = SpreadsheetApp.getActive();
-  var rows = spreadsheet.getRange('A1:C3').getValues();
-  
-  for(var i = 0; i < rows.length; i++) {
-    var columns = rows[i];
-    for(var j = 0; j < columns.length; j++) {
-      var value = columns[j];
-      if ("Hello World" == value) {
-        count++;
-      }
-    }  
-  }
-  Logger.log("Count of 'Hello World' from column A1:C1 is: " + count);
-  SpreadsheetApp.getUi().alert("Count of 'Hello World' from column A1:C1 is: " + count);
+  var sheet = spreadsheet.getActiveSheet();
+  sheet.clear();
 }
+
+function lastColumnWithData() {
+  var spreadsheet = SpreadsheetApp.getActive();
+  var sheet = spreadsheet.getActiveSheet();
+  var lastColumn = sheet.getLastColumn();  
+  var columnLetter = columnToLetter(lastColumn);
+  
+  Logger.log(columnLetter);
+  SpreadsheetApp.getUi().alert("Last column with data: " + columnLetter);
+}
+
+function lastRowWithData() {
+  var spreadsheet = SpreadsheetApp.getActive();
+  var sheet = spreadsheet.getActiveSheet();
+  var lastRow = sheet.getLastRow();  
+ 
+  Logger.log(lastRow);
+  SpreadsheetApp.getUi().alert("Last row with data: " + lastRow);
+}
+
+function lastColumnWithDataInRange() {
+  var spreadsheet = SpreadsheetApp.getActive();
+  var range = spreadsheet.getRange("A1:C3");  
+  var result = getLastRowAndColumnInRange(range);
+  Logger.log("Last Row: " + result[0]);
+  Logger.log("Last Column: " + result[1]);
+
+  var columnLetter = columnToLetter(result[1]);
+  SpreadsheetApp.getUi().alert("Last column with data in range: " + columnLetter);
+}
+
+function lastRowWithDataInRange() {
+  var spreadsheet = SpreadsheetApp.getActive();
+  var range = spreadsheet.getRange("A1:C3");  
+  var result = getLastRowAndColumnInRange(range);
+  Logger.log("Last Row: " + result[0]);
+  Logger.log("Last Column: " + result[1]);
+  
+  SpreadsheetApp.getUi().alert("Last row with data in range: " + result[0]);
+}
+
+function lastFromColumnA() {
+  var spreadsheet = SpreadsheetApp.getActive();
+  var range = spreadsheet.getRange("A1:A");  
+  var result = getLastRowAndColumnInRange(range);
+  Logger.log("Last Row: " + result[0]);
+  Logger.log("Last Column: " + result[1]);
+
+  SpreadsheetApp.getUi().alert("Last from column A: " + "A:" + result[0]);
+}
+
+function lastFromRowOne() {
+  var spreadsheet = SpreadsheetApp.getActive();
+  var range = spreadsheet.getRange("A1:1");  
+  var result = getLastRowAndColumnInRange(range);
+  Logger.log("Last Row: " + result[0]);
+  Logger.log("Last Column: " + result[1]);
+
+  var columnLetter = columnToLetter(result[1]);
+  SpreadsheetApp.getUi().alert("Last from row One: " + columnLetter + ":1");
+}
+
+function columnToLetter(column) {
+  var temp, letter = '';
+  while (column > 0) {
+    temp = (column - 1) % 26;
+    letter = String.fromCharCode(temp + 65) + letter;
+    column = (column - temp - 1) / 26;
+  }
+  return letter;
+}
+
+function letterToColumn(letter) {
+  var column = 0, length = letter.length;
+  for (var i = 0; i < length; i++) {
+    column += (letter.charCodeAt(i) - 64) * Math.pow(26, length - i - 1);
+  }
+  return column;
+}
+
+function getLastRowAndColumnInRange(range) {
+
+  var result = [];
+  var maxRow = 0;
+  var maxColumn = 0;
+
+  var rows = range.getDisplayValues();
+  for (var i = 0; i < rows.length; i++) {
+    var columns = rows[i];
+    for (var j = 0; j < columns.length; j++) {
+      if (columns[j]) {
+        var row = i + 1;
+        var column = j + 1;
+        maxRow = (row > maxRow) ? row : maxRow;
+        maxColumn = (column > maxColumn) ? column : maxColumn;
+      } 
+    }
+  }
+
+  result.push(maxRow);
+  result.push(maxColumn);
+  return result;
+
+}
+
+
