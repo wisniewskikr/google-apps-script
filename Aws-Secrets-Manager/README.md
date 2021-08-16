@@ -1,11 +1,11 @@
-ALERT
-=====
+AWS SECRETS MANAGER
+===================
 
 
 GSHEET URL
 ----------
 
-* **Gsheet URL**: https://docs.google.com/spreadsheets/d/1PN47sUdLQxEjEp_w0Q0yqoG8gx7HtQZ98osi-QAtzcc/edit?usp=sharing
+* **Gsheet URL**: https://docs.google.com/spreadsheets/d/1W5xCZbZz31y31bTS9ELQdIrGKfFXIxcsZcFSNcamsAo/edit?usp=sharing
 
 
 DESCRIPTION
