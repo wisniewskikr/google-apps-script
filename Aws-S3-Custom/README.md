@@ -1,11 +1,11 @@
-AWS LAMBDA
-============
+AWS S3 Custom
+=============
 
 
 GSHEET URL
 ----------
 
-* **Gsheet URL**: 
+* **Gsheet URL**: https://docs.google.com/spreadsheets/d/1Ksrif4CoBhSrCULa8Gb7qcSka_Y50aLh8TBct9tmWF0/edit?usp=sharing
 
 
 DESCRIPTION
