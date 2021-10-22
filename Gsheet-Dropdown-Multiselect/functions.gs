@@ -17,6 +17,8 @@ function onEdit(e) {
     target += "," + source;
   } else if (target.includes("," + source)) {
     target = target.replace("," + source, "");
+  } else if (target.includes(source + ",")) {
+    target = target.replace(source + ",", "");
   } else if (target.includes(source)) {
     target = target.replace(source, "");
   }
