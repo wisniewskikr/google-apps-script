@@ -12,20 +12,21 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to show how to display Alert in Gsheet using Menu. 
-
-##### Details
-When user choose custom menu in Gsheet then Google Apps Script function is run then Alert shoudl be displayed in Gsheet.
+The goal of this project is to show how to connect Gsheet with AWS Redshift. 
 
 ##### Result 
-Text "Hello World" should be displayed in Alert.
+When user click on menu: "Functions -> Redshift Schemas" then schemas should be taken form Redshift and display as alert in Gsheet.
 
 
 IMPLEMENTATION
 -----------
 
 Implementation details:
-* In file "functions.gs" create all functions.
+* In file "configuration.gs" is all configuration to AWS Redshift;
+* In file "aws.gs" are all functions connected with AWS;
+* In file "functions.gs" create all functions;
+* In AWS Redshift has to be created new cluster;
+* In AWS IAM has to be created new user with roles "AmazonRedshiftFullAccess" and "AmazonRedshiftDataFullAccess". 
   
 
 LAUNCH
@@ -33,5 +34,5 @@ LAUNCH
 
 To launch project please:
 * Open Gsheet;
-* Choose "Greeting -> Display Hello World";
+* Choose "Functions -> Redshift Schemas";
 * (Optional) Sometimes you will be asked to confirm permissions.
