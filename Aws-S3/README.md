@@ -38,3 +38,9 @@ To launch project please:
 * Choose "S3 Functions -> Import Data from S3;
 * Choose "S3 Functions -> Export Data to S3;
 * (Optional) Sometimes you will be asked to confirm permissions.
+
+
+DOCUMENTATION
+-------------
+
+https://engetc.com/projects/amazon-s3-api-binding-for-google-apps-script/
