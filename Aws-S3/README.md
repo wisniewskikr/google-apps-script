@@ -12,7 +12,9 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to show how to import and export data from and to AWS S3 using Google Apps Script. 
+The goal of this project is to show how to import and export data from and to AWS S3 using Google Apps Script. Functions:
+- Import: content of file "demo.csv" is displayed in Browser;
+- Exprort: file "demo.txt" with content "Hello World" is created in code and exported to S3. 
 
 ##### Details
 Data are imported and exported from and to AWS S3 using Google Apps Script. Additional library "S3" is used here.
@@ -33,6 +35,6 @@ LAUNCH
 
 To launch project please:
 * Open Gsheet;
-* Choose "Greeting -> Import Data from S3;
-* Choose "Greeting -> Export Data to S3;
+* Choose "S3 Functions -> Import Data from S3;
+* Choose "S3 Functions -> Export Data to S3;
 * (Optional) Sometimes you will be asked to confirm permissions.
