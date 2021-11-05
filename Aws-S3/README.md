@@ -37,10 +37,14 @@ To launch project please:
 * Open Gsheet;
 * Choose "S3 Functions -> Import Data from S3;
 * Choose "S3 Functions -> Export Data to S3;
+* Choose "S3 Functions -> Create Bucket "wisniewskikr-tmp";
+* Choose "S3 Functions -> Delete Bucket "wisniewskikr-tmp";
+* Choose "S3 Functions -> Create Folder "tmp" with file;
+* Choose "S3 Functions -> Delete Folder "tmp" with file;
 * (Optional) Sometimes you will be asked to confirm permissions.
 
 
 DOCUMENTATION
 -------------
 
-https://engetc.com/projects/amazon-s3-api-binding-for-google-apps-script/
+External library has to be used here: https://engetc.com/projects/amazon-s3-api-binding-for-google-apps-script/
