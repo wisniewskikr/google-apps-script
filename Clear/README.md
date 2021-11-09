@@ -33,5 +33,7 @@ LAUNCH
 
 To launch project please:
 * Open Gsheet;
-* Choose "Greeting -> Clear";
+* Choose "Greeting -> Clear Sheet";
+* Choose "Greeting -> Clear Cell A1";
+* Choose "Greeting -> Clear Validation A2";
 * (Optional) Sometimes you will be asked to confirm permissions.
