@@ -6,7 +6,7 @@ GSHEET URL
 ----------
 
 * **Gsheet URL**: https://docs.google.com/spreadsheets/d/1_JG9Ghk0WMp1J8ZXLtQL7N84lwZu3BHkjAREY7yfbnA/edit?usp=sharing
-* **Web App URL**: https://script.google.com/macros/s/AKfycbzqGFumGRSNqZxHEc9XrLoyZDipw-mmRRXhmqHNYOd84uedsnjGrSXeETyhZxmAcPqB/exec
+* **Web App URL**: https://script.google.com/macros/s/AKfycbzmP-qmX8BmLvf8_fo2j2HkCnmY1hMzhIvkTvhHXX6MoBftiGmKaVy5_DswfWDt-KJC/exec
 
 
 DESCRIPTION
